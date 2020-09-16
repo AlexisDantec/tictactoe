@@ -23,13 +23,15 @@ def print_tab():
         for j in range(0, column):
             print("_", end = '_')
         print()
-#the player choose the position where he would like.he must right the number of the column than a comma than the row.
+#the player choose the position where he would like.he must write the number of the column than a comma than the row.
 def where_place():
     global position, length_position, y, x
     position= input('write position : ')
     length_position = len(position)
-    y = int(position[0])
-    x = int(position[2])
+    test_break()
+    if ok==1:
+        y = int(position[0])
+        x = int(position[2])
 
 def counter():
     global count
@@ -44,7 +46,6 @@ def test_break():
         ok=1
 #change the caractere on the tab.
 def change_box():
-    test_break()
     if ok==1:
         for i in range (0, row):
             for j in range(0, column):
